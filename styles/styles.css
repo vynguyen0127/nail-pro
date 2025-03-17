@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    background-color: #f8abc5;
+    color: #333;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background-color: #d81b60;
+    color: white;
+    position: relative;
+    z-index: 10;
+}
+.nav-links {
+    display: flex;
+}
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+.nav-links a:hover {
+    text-decoration: underline;
+}
+.hamburger {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+.mobile-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    /* background: #cb6b8e; */
+    background-image: linear-gradient(#d81b60,#cb6b8e);
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.5s ease-in-out;
+}
+.mobile-menu a {
+    padding: 15px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+}
+.mobile-menu a:hover {
+    background: #ff4081;
+}
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+    .hamburger {
+        display: block;
+    }
+    .mobile-menu.show {
+        display: flex;
+        max-height: 300px;
+    }
+}
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    text-align: center;
+    background-image: url('../src/model.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+
+}
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    font-family: 'Playfair Display', serif;
+}
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+.btn {
+    padding: 10px 20px;
+    background-color: #ff4081;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+}
+.btn:hover {
+    background-color: #d81b60;
+}
+.footer {
+    background-color: #d81b60;
+    color: white;
+    text-align: center;
+    padding: 20px;
+
+}
+.footer .info {
+    margin-bottom: 10px;
+}
+.footer iframe {
+    width: 100%;
+    max-width: 600px;
+    height: 300px;
+    border: none;
+}
